@@ -63,3 +63,65 @@ main p{
 table th, table td {
     text-align: center;
 }
+.importante {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+.importante-activo {
+    background-color: #ffff00; /* Amarillo fluorescente */
+    font-weight: bold;
+    border-radius: 3px;
+}
+#boton-resaltar {
+    padding: 10px 20px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#boton-resaltar:hover {
+    background-color: #34495e;
+}
+.caso-clinico {
+    border-left: 5px solid #2c3e50; /* Una barrita lateral médica */
+    padding: 15px;
+    margin-bottom: 30px;
+    background-color: #f9f9f9;
+}
+
+.importante-activo {
+    background-color: yellow !important;
+    font-weight: bold;
+     }
+.btn-atlas {
+    background-color: #91a8c0; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-atlas:hover {
+    background-color: #7e96ad;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.btn-atlas:active {
+    transform: translateY(0);
+}
+
+.btn-atlas.activo {
+    background-color: #e74c3c;
+    }
