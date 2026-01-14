@@ -13,7 +13,8 @@
             <ul>
                 <li><a href="#introduccion">Introducción</a></li>
                 <li><a href="#patnotumor">Patología Ósea No Tumoral</a></li>
-                <li><a href="#pattumor">Patología Ósea Tumoral</a></li>
+                <li><a href="#pattumor">Patología Ósea Tumoral              
+                </a></li>
             </ul>
         </nav>
     </header>
@@ -78,13 +79,29 @@
             <h1>Patología Ósea Tumoral</h1>
             <div>
                 <h2>Benigna</h2>
-                <div>
-                    <h3>Osteoma Osteoide</h3>
-                </div>
-                <div>
-                    <h3>Osteoblastoma</h3>
+                <p>Dentro de la patología tumoral benigna ósea hemos seleccionado las patologías más prevalentes, entre las que se incluyen el <strong>osteocondroma</strong>, el <strong>condroma/encondroma</strong>, el <strong>osteoma osteoide</strong> y el <strong>osteoblastoma</strong>.</p>
+            <p>En cuanto a estas dos últimas, el osteoma osteoide y el osteoblastoma son dos entidades formadoras de osteoide y hueso inmaduro, las cuales comparten numerosas características tanto a nivel histológico como molecular. No obstante, se distinguen fundamentalmente por su localización anatómica, dimensiones y comportamiento clínico.</p>
+            <div class="osteoide-cabecera">
+                <div class="osteoma-osteoide">
+                    <h3>Osteoma Osteoide <button class="btn-atlas" onclick="resaltarLocal(this)">Lo + importante</button></h3>
+                    <p>El <strong>osteoma osteoide</strong> es el tercer tumor óseo benigno más frecuente. Afecta a <span class="importante">varones jóvenes</span> y se manifiesta clínicamente por un <span class="importante">dolor nocturno intenso que remite con el uso de antiinflamatorios no esteroideos (AINEs)</span>. Esta clínica se explica por la elevada producción de prostaglandinas, concretamente PGE2, que aparece de forma secundaria a la elevada actividad osteoblástica del tumor. Los AINEs inhiben la síntesis de PGE2 mediante el bloqueo de las ciclooxigenasas, lo que respalda la respuesta analgésica de estos fármacos.</p>
+                    <p>Desde el punto de vista anatómico, el osteoma osteoide se localiza <span class="importante">preferentemente en la zona cortical de huesos largos</span>, principalmente tibia o fémur, lo que se relaciona con la intensa esclerosis reactiva del hueso adyacente. Esto se puede comprobar a nivel radiológico, pues la imagen radiológica típica muestra un nidus intracortical radiolúcido asociado a engrosamiento cortical y marcada esclerosis reactiva. A nivel histológico, el nidus es pequeño (1,5-2 cm), bien delimitado y formado por osteoblastos pequeños, con núcleos monomórficos y citoplasma bien definido.</p>
                 </div>
             </div>
+                
+                <div class="osteoide-cabecera">
+                    <div class="osteoblastoma">
+                        <h3>Osteoblastoma <button class="btn-atlas" onclick="resaltarLocal(this)">Lo + importante</button></h3>
+                        <p>El osteoblastoma, por el contrario, aunque también afecta a <span class="importante">varones jóvenes</span> y puede cursar con dolor nocturno, <span class="importante">no responde al tratamiento con AINEs</span>. Esto se debe a que el dolor está más relacionado con el crecimiento expansivo del tumor y la posible compresión de estructuras adyacentes, más que con la sobreproducción de prostaglandinas. De hecho, su localización más característica es la <span class="importante">columna vertebral</span>, principalmente la zona posterior y con una disposición intramedular, lo que puede derivar en síntomas neurológicos. El osteoblastoma tiene un <span class="importante">comportamiento local más agresivo, mayor tamaño y se asocia a un mayor riesgo de recidiva</span>. </p>
+                        <p>Histológicamente, el nidus es  mayor (>2cm), menos delimitado y con menor esclerosis periférica. El patrón de los osteoblastos es más variable, pueden ser de diferentes tamaños, con abundante citoplasma eosinofílico y núcleos algo más irregulares, aunque sin criterios de malignidad</p>
+                    </div>
+                    
+                    <h4>Osteoblastoma vs Osteoma Osteoide</h4>
+                </div>
+                <div>
+                    <h3>Osteocondroma/Encondroma</h3>
+                    <p>miguel</p>
+                </div>
             <div>
                 <h2>Maligna</h2>
                 <div>
@@ -110,8 +127,31 @@
     <footer>
         <p>© 2025 Anatomía Patológica General y Especial </p>
     </footer>
+<script>
+        function resaltarLocal(boton) {
+            const contenedor = boton.closest('.osteoide-cabecera');
+
+            if (boton.innerText === "Lo + importante") {
+                boton.innerText = "Ocultar";
+            } else {
+                boton.innerText = "Lo + importante";
+            }
+
+            const elementos = contenedor.querySelectorAll('.importante');
+
+            elementos.forEach(el => {
+                el.classList.toggle('importante-activo');
+            });
+        }
+    </script>
+<style>
+    .importante-activo {
+        background-color: yellow !important;
+        color: black !important;
+        font-weight: bold !important;
+        display: inline;
+    }
+</style>
+</style>
 </body>
-
 </html>
-
-
