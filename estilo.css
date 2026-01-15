@@ -125,3 +125,115 @@ table th, table td {
 .btn-atlas.activo {
     background-color: #e74c3c;
     }
+    .bibliografia-seccion {
+    margin-top: 15px;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+details {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+summary {
+    font-weight: bold;
+    color: #2c3e50;
+    list-style: none; 
+}
+
+summary::before {
+    content: "▶ "; 
+    font-size: 0.8rem;
+}
+
+details[open] summary::before {
+    content: "▼ "; 
+}
+
+details ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    color: #555;
+}
+
+details li {
+    margin-bottom: 5px;
+}
+details a {
+    color: #007bff; 
+    text-decoration: none; 
+    transition: color 0.2s ease;
+}
+
+details a:hover {
+    color: #0056b3; 
+    text-decoration: underline; 
+}
+details a::after {
+    content: " ↗"; 
+    font-size: 1.3rem;
+    vertical-align: super;
+}
+main{  
+    text-align: justify;
+}
+details a {
+    position: relative;
+    padding-right: 18px; 
+}
+
+details a::after {
+    content: "↗";
+    position: absolute; 
+    right: 0;
+    top: -2px;         
+    font-size: 1rem;   
+    font-weight: bold;
+    color: #007bff;
+}
+.contenedor-imagen {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.contenedor-imagen img {
+    max-width: 90%;    
+    height: auto;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 1px solid #ddd;
+}
+
+.pie-foto {
+    font-size: 0.85rem;
+    color: #666;
+    font-style: tahoma;
+    margin-top: 8px;
+}
+.radiog-tcg-der {
+    float: right !important;        
+    width: 550px !important;        
+    margin-left: 20px !important;   
+    margin-bottom: 5px !important; 
+    background: #f9f9f9 !important;
+    padding: 5px !important;
+    text-align: center !important;
+}
+
+.radiog-tcg-der img {
+    width: 100% !important;   
+    object-fit: auto !important;   
+    border-radius: 4px !important;
+}
+
+@media (max-width: 500px) {
+    .radiog-tcg-der {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+    }
+}
